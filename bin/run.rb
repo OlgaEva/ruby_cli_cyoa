@@ -18,8 +18,9 @@ class Adventure
         @prompt.select("Are you a new or returning User?") do |menu|
             menu.choice "New" -> do
                 puts ("Welcome, please choose a Username:")
-                new_user = get.chomp
-                
+                new_user = gets.chomp
+            end
+        end
     end
 
 end
