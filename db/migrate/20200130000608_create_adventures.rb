@@ -1,4 +1,4 @@
-class CreateAdventures < ActiveRecord::Migration[6.0]
+class CreateAdventures < ActiveRecord::Migration[5.2]
   def change
     create_table :adventures do |t|
       t.string :title

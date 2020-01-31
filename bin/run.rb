@@ -4,6 +4,7 @@ require 'pry'
 require 'json'
 require 'tty-prompt'
 require 'colorize'
+
 ActiveRecord::Base.logger = nil
 
 class Adventure
@@ -16,11 +17,14 @@ class Adventure
 
     def initial_interaction
         @prompt.select("Are you a new or returning User?") do |menu|
-            menu.choice "New" -> do
+            menu.choice "New", -> do
                 puts ("Welcome, please choose a Username:")
                 new_user = gets.chomp
             end
         end
     end
+
+    # cli = Adventure.new
+    # cli.all_user_initial_interaction
 
 end
